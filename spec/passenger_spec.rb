@@ -1,13 +1,13 @@
 require './lib/passenger'
 
-Rspec.describe Passenger do
+RSpec.describe Passenger do
   before(:each) do
     @charlie = Passenger.new({"name" => "Charlie", "age" => 18})
   end
 
   describe '#initialize' do
     it 'exists' do
-      expect(@charlie).to be_instance_of(Charlie)
+      expect(@charlie).to be_instance_of(Passenger)
     end
 
     it 'has a name' do
@@ -18,4 +18,4 @@ Rspec.describe Passenger do
       expect(@charlie.age).to eq(18)
     end
   end
-end 
+end
