@@ -22,4 +22,14 @@ class Vehicle
   def add_passenger(passenger)
     @passengers << passenger
   end
+
+  def num_adults
+    adults = 0
+    adult = @passengers.map do |passenger|
+      if passenger.adult? == true
+        adults += 1
+      end
+    end
+    adults
+  end
 end
