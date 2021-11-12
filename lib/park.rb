@@ -2,8 +2,10 @@ require './lib/passenger'
 require './lib/vehicle'
 
 class Park
-  attr_reader
+  attr_reader :name, :price
 
-  def initialize
+  def initialize(name, price)
+    @name = name
+    @price = price
   end
-end 
+end
