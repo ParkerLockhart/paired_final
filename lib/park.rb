@@ -31,6 +31,4 @@ class Park
       end
     end
   end 
-
-
 end
