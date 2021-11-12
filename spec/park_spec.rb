@@ -51,4 +51,14 @@ describe Park do
     end
   end
 
+  describe '#charge_admission' do
+    it 'charges each adult admission price' do  
+      @garner.admit_vehicle(@vehicle)
+      @garner.admit_vehicle(@vehicle1)
+      @garner.admit_passengers
+      @garner.charge_admission
+      expect(@garner.total_revenue).to eq(12)
+    end
+  end
+
 end
